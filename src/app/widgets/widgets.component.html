@@ -1,1 +1,13 @@
-Hello 111
+<div class="mdl-grid widgets">
+
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-widgets-list [widgets]="widgets" (selected)="selectWidget($event)">
+    </app-widgets-list>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <app-widget-detail [widget]="selectedWidget">
+      Select an Widget
+    </app-widget-detail>
+  </div>
+
+</div>

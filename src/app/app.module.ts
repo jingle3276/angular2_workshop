@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { Ng2RestAppRoutingModule } from './app-routing.module';
 
 import { ItemsService } from './shared';
+import { WidgetService } from './shared';
 
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
@@ -12,6 +13,9 @@ import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemDetailComponent } from './items/item-detail/item-detail.component';
 import { FeaturedItemComponent } from './items/featured-item/featured-item.component';
 import { WidgetsComponent } from './widgets/widgets.component';
+import { WidgetListComponent } from './widgets/widgets-list/widgets-list.component';
+import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { WidgetsComponent } from './widgets/widgets.component';
     ItemsListComponent,
     ItemDetailComponent,
     FeaturedItemComponent,
-    WidgetsComponent
+    WidgetsComponent,
+    WidgetListComponent,
+    WidgetDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     HttpModule,
     Ng2RestAppRoutingModule
   ],
-  providers: [ItemsService],
+  providers: [ItemsService, WidgetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
