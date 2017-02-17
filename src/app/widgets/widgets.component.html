@@ -4,10 +4,15 @@
     <app-widgets-list [widgets]="widgets" (selected)="selectWidget($event)">
     </app-widgets-list>
   </div>
-  <div class="mdl-cell mdl-cell--6-col">
+  <div class="mdl-cell mdl-cell--4-col">
     <app-widget-detail [widget]="selectedWidget">
       Select an Widget
     </app-widget-detail>
+  </div>
+ 
+  <div class="mdl-cell mdl-cell--2-col">
+    <app-review>
+    </app-review>
   </div>
 
 </div>

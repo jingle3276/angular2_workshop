@@ -15,6 +15,7 @@ import { FeaturedItemComponent } from './items/featured-item/featured-item.compo
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.component';
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { WidgetDetailComponent } from './widgets/widget-detail/widget-detail.com
     FeaturedItemComponent,
     WidgetsComponent,
     WidgetListComponent,
-    WidgetDetailComponent
+    WidgetDetailComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
