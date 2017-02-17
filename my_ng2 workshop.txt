@@ -1,0 +1,111 @@
+A simple Angular 2 REST-ful app built using the Angular CLI
+
+https://github.com/onehungrymind/ng2-rest-app
+
+
+constructors(private itemsService: ItemsService) {}
+
+WebStorm is a great editor for angular2 !
+
+
+typescript playground 
+https://www.typescriptlang.org/play/
+
+
+don't expose service to template
+
+the angular 2 CLI
+
+template
+property binding
+flows data from the component to an element 
+
+# defines(creates) a local variable inside template
+
+Component Driven Architecture
+components are small, encapsulated pieces of software that can be reused in many different contexts
+
+Widget.component.ts is the parent
+widgets-list.component is the child 
+widgets-details.compoent is another child
+
+exercise:
+Create a presentational widgets-list widget-details component using @Input and @Output
+Pass the widgets collection to the widgets-list component
+Capture a selected output event from widgets-list component
+Display the selected widget in the widget-details component
+
+
+
+Day2
+Angular2 
+module, components, service
+import, export (ES6 Module)
+
+entrypoint of an application: bootstrapModule()
+
+route: Path -> components
+
+component: class, template; 
+
+ngOnInit: if you reference data, ngOnInit will make sure it is avaiable
+
+constructor: Inject dependency; private makes the variable to the class, not just function scope
+
+template can be inline or in a file
+
+         {{value}}
+template    ->      class
+           interplation           
+template    ->      class 
+
+review challenges: 
+in your working example, create a new review feature including file structure, component class and template
+make it aviable to rest of the application
+display the review component in the application via its HTML selector 
+Display the review component in the application via a route
+Bind to a simple property in the template 
+create an array and use a built in directive to display the array in the template
+
+
+notes:
+() binds to input 
+[] binds to output
+[()] two-way binding
+
+
+Book: Clean Code
+https://www.angular2patterns.com/
+
+John Papa;s style guide
+
+Avoid: shared mutable states across components
+Isolate state mutations: 
+Itemdetail makes a copy of Item instead of changing the shared model
+
+Form
+
+Challenges
+Create a form to display the current selected widget
+Use a setter to isolate the widget mutation
+create a button to save the edited widget to the parent component
+create a button to cancel editing the widget to the parent component 
+using ngForm, add in some validation for editing the widget component
+
+
+Server side 
+Chanllenges 
+replace the local widgets collection with a call to the widgets endpoint
+update the widgets component to handle the async call
+Flesh out the rest of the CRUD functionality using ItemsService as reference 
+Bonus Try to use Observable.subscribe
+
+
+Angular Testing: 
+http://angulartestingquickstart.com/
+
+
+
+
+
+
