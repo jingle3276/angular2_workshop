@@ -1,5 +1,25 @@
 <div class="mdl-card__supporting-text">
-  <div class="mdl-textfield mdl-js-textfield">
-    <h2 class="mdl-card__title-text" *ngIf="widget"> {{widget.name}}</h2>
-  </div>
+ 
+    <div *ngIf="sel_widget">
+
+        <form novalidate #formRef="ngForm">
+          <div class="mdl-textfield mdl-js-textfield">
+            <label>Widget Name</label>
+            <input [(ngModel)]="sel_widget.name"
+                   name="name" required
+                   placeholder="Enter a name"
+                   class="mdl-textfield__input" type="text">
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <label>Widget Description</label>
+            <input [(ngModel)]="sel_widget.description"
+                   name="description"
+                   placeholder="Enter a description"
+                   class="mdl-textfield__input" type="text">
+          </div>
+        </form>
+
+    </div>
+
 </div>

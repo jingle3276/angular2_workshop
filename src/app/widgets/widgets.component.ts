@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./widgets.component.css']
 })
 export class WidgetsComponent implements OnInit {
-  selectedWidget: Widget;
+  selectedWidget: Widget ;
   widgets: Widget[];
 
   constructor(
@@ -18,13 +18,15 @@ export class WidgetsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.widgets = this.widgetService.widgets;
+    this.widgetService.loadWidgets().subscribe(
+        res => {
+          this.widgets = res;
+    });
   }
 
   selectWidget (widget: Widget) {
     this.selectedWidget = widget;
   } 
-
 
 }
 

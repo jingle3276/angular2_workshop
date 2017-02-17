@@ -6,8 +6,13 @@ import { Widget } from '../../shared';
   templateUrl: './widget-detail.component.html'
 })
 export class WidgetDetailComponent {
-  @Input()
-  widget: Widget;
+  sel_widget: Widget;
   //@Output() saved = new EventEmitter();
+
+  @Input() set widget(value: Widget){
+    if (value) {
+        this.sel_widget = Object.assign({}, value);
+    }
+  }
 
 }
